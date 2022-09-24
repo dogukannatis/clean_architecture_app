@@ -8,6 +8,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 import '../../domain/model.dart';
+import '../login/login.dart';
 import '../resources/color_manager.dart';
 
 class OnBoardingView extends StatefulWidget {
@@ -79,7 +80,10 @@ class _OnBoardingViewState extends State<OnBoardingView> {
                 alignment: Alignment.centerRight,
                 child: TextButton(
                   onPressed: (){
-
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => const LoginView()),
+                    );
                   },
                   child: Text(AppStrings.skip, textAlign: TextAlign.end, style: Theme.of(context).textTheme.subtitle2,),
                 ),
